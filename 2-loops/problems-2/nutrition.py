@@ -26,11 +26,10 @@ fruits = [{"Name": "Apple", "Calories": "130"},
           {"Name": "Tangerine", "Calories": "50"},
           {"Name": "Watermelon", "Calories": "80"}]
 
-for i in range(len(fruits)):
-    if str(prompt).capitalize() == fruits[i]["Name"]:
-      print("Calories:", fruits[i]["Calories"])
+for fruit in fruits:
+    if str(prompt).capitalize() == fruit["Name"]:
+      print("Calories:", fruit["Calories"])
     else: pass
-      
 
 
 
