@@ -20,25 +20,24 @@ def main():
     else:
         print("Invalid")
 
-def is_valid(s):
-    # check length is equal to or more than 2 and less than or equal to 6
-    # check for invalid chars (.isalnum())
-    txt=""
-    num=""
-    if len(s) >= 2 and len(s) <= 6 and s.isalnum():
-      print("s is", s)
-      # split string into left/right parts by finding the first numeric char and making that the first char in the right part
-      for i in s:
-          if(i.isdigit()): num+=i
-          else: txt+=i
-    else: 
-      print("Ooops")
-      
-    # check that the left part is at least 2 in length
-    print(txt)
-    # check that the right part doesn't start with 0
-    # check that the right part is all numbers (.isnumeric())
-    print(num)
+    def is_valid(s):
+        txt=""
+        num=""
+        # check length is >= 2 and >= 6 and contains no invalid chars
+        if len(s) >= 2 and len(s) <= 6 and s.isalnum():
+            print("s is", s)
+            # split string into left/right by finding the first numeric char and making that the first char in the right part
+            for i in s:
+                if(i.isdigit()): num+=i
+                else: txt+=i
+        else: 
+            print("Ooops")
+            
+        # check that the left part is at least 2 in length
+        print(txt)
+        # check that the right part doesn't start with 0
+        # check that the right part is all numbers (.isnumeric())
+        print(num)
 
 main()
 
