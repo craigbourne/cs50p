@@ -1,4 +1,8 @@
-user_input = input("Please enter something to be slowed down\n").split(" ")
-slowed_down_user = '...'.join(user_input)
+'''
+Some people have a habit of lecturing speaking rather quickly, and it’d be nice to slow them down, a la YouTube’s 0.75 playback speed, or even by having them pause between words.
 
-print(slowed_down_user)
+In a file called playback.py, implement a program in Python that prompts the user for input and then outputs that same input, replacing each space with ... (i.e., three periods).
+'''
+
+user_input = input("Please enter something to be slowed down\n").replace(" ", "...")
+print(user_input)

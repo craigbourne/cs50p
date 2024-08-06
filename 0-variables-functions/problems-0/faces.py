@@ -12,6 +12,6 @@ def main():
   print(result)
 
 def convert(str):
-  return str.replace(":)", "🙂").replace(":(","🙁")
+  return str.replace(":)", "🙂").replace(":(", "🙁")
 
 main()

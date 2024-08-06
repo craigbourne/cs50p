@@ -1,18 +1,11 @@
-"""
-Even if you haven’t studied physics (recently or ever!), you might have heard that e=mc2, wherein 
-e represents energy (measured in Joules), 
-m represents mass (measured in kilograms), and 
-c represents the speed of light (measured approximately as 300000000 meters per second), per Albert Einstein et al. Essentially, the formula means that mass and energy are equivalent.
+'''
+Even if you haven’t studied physics (recently or ever!), you might have heard that, E= mc2 wherein E represents energy (measured in Joules), m represents mass (measured in kilograms), and c represents the speed of light (measured approximately as 300000000 meters per second), per Albert Einstein et al. Essentially, the formula means that mass and energy are equivalent.
 
 In a file called einstein.py, implement a program in Python that prompts the user for mass as an integer (in kilograms) and then outputs the equivalent number of Joules as an integer. Assume that the user will input an integer.
-"""
+'''
 
-def relativity():
-  mass = int(input("What is the mass in kg? "))
-  light = 300000000 ** 2
-  energy = mass * light
-  return f"{energy:,}"
+mass = int(input("What is the mass in kg? "))
+lightspeed = 300000000 ** 2
+energy = mass * lightspeed
 
-print(relativity())
-print(relativity())
-print(relativity())
+print(energy)
