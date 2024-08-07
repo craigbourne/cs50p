@@ -7,11 +7,17 @@ Then, in that same file, implement a function called main that prompts the user 
 """
 
 def main():
-  face = input("What emoticon face is your input? ")
-  result = convert(face)
+  # prompts the user for input 
+  prompt = input("what is your input?\n")
+
+  # call convert on input
+  result = convert(prompt)
+  # print result
   print(result)
 
+# implement a function called convert that accepts a str
 def convert(str):
+  # return converted str
   return str.replace(":)", "🙂").replace(":(", "🙁")
 
 main()
