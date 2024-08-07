@@ -13,10 +13,14 @@ def main():
     tip = dollars * percent
     print(f"Leave ${tip:.2f}")
 
+
 def dollars_to_float(d):
-    return float(d[1:])
+    # remove the leading $ & return the amount as a float
+    return float(d.strip("$"))
+
 
 def percent_to_float(p):
-    return float(p[:len(p)-1]) / 100
+    # remove the trailing % & convert to decimal & return as float
+    return  float(p.rstrip("%"))/100
 
 main()
