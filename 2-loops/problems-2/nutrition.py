@@ -1,9 +1,8 @@
-"""
-In a file called nutrition.py, implement a program that prompts consumers users to input a fruit (case-insensitively) and then outputs the number of calories in one portion of that fruit, per the FDA’s poster for fruits, which is also available as text. Capitalization aside, assume that users will input fruits exactly as written in the poster (e.g., strawberries, not strawberry). Ignore any input that isn’t a fruit.
-"""
+'''
+The U.S. Food & Drug Adminstration (FDA) offers downloadable/printable posters that “show nutrition information for the 20 most frequently consumed raw fruits … in the United States. Retail stores are welcome to download the posters, print, display and/or distribute them to consumers in close proximity to the relevant foods in the stores.”
 
-# prompts consumers users to input a fruit
-prompt = input("Item: ")
+In a file called nutrition.py, implement a program that prompts consumers users to input a fruit (case-insensitively) and then outputs the number of calories in one portion of that fruit, per the FDA’s poster for fruits, which is also available as text. Capitalization aside, assume that users will input fruits exactly as written in the poster (e.g., strawberries, not strawberry). Ignore any input that isn’t a fruit.
+'''
 
 fruits = [{"Name": "Apple", "Calories": "130"},
           {"Name": "Avocado", "Calories": "50"},
@@ -11,7 +10,7 @@ fruits = [{"Name": "Apple", "Calories": "130"},
           {"Name": "Cantaloupe", "Calories": "50"},
           {"Name": "Grapefruit", "Calories": "60"},
           {"Name": "Grapes", "Calories": "90"},
-          {"Name": "Honeydew", "Calories": "50"},
+          {"Name": "Honeydew Melon", "Calories": "50"},
           {"Name": "Kiwifruit", "Calories": "90"},
           {"Name": "Lemon", "Calories": "15"},
           {"Name": "Lime", "Calories": "20"},
@@ -22,14 +21,13 @@ fruits = [{"Name": "Apple", "Calories": "130"},
           {"Name": "Pineapple", "Calories": "50"},
           {"Name": "Plums", "Calories": "70"},
           {"Name": "Strawberries", "Calories": "50"},
-          {"Name": "Sweet", "Calories": "100"},
+          {"Name": "Sweet Cherries", "Calories": "100"},
           {"Name": "Tangerine", "Calories": "50"},
           {"Name": "Watermelon", "Calories": "80"}]
 
+# prompts consumers users to input a fruit (case-insensitively)
+prompt = input("Fruit: ").lower()
+# outputs the number of calories in one portion of that fruit
 for fruit in fruits:
-    if str(prompt).capitalize() == fruit["Name"]:
-      print("Calories:", fruit["Calories"])
-    else: pass
-
-
-
+    if fruit["Name"].lower() == prompt:
+        print(f"Calories: {fruit["Calories"]}")
