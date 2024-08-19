@@ -13,7 +13,6 @@ def camel():
       snake_case += letter
   print(snake_case)
 
-
-
 if __name__ == "__main__":
   main()
+
